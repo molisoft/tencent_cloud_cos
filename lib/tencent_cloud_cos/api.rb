@@ -11,7 +11,7 @@ module TencentCloudCos
       config.method = 'put'
       config.uri    = filename
       content_type  = config.content_type
-      src_filename = "attachment; filename*=\"UTF-8''#{File.basename(filename)}\""
+      src_filename = "attachment; filename*=\"UTF-8''#{File.basename(file.path)}\""
 
       authorization = Authorization.new(config)
       begin
